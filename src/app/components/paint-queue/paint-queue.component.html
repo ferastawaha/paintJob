@@ -1,0 +1,31 @@
+<div *ngIf="listCarInQueue as list;else loading">
+    <h2 style="font-size: 14px; font-weight: bold;"> Paint jobs in Queue</h2>
+    <table class="table table-bordered">
+        <thead style="background-color: #dddddd; color: black;">
+          <tr>
+            <th>Plate No.</th>
+            <th>Current Color</th>
+            <th>Target Color</th>
+       
+          </tr>
+        </thead>
+        <tbody style="background-color: white;">
+          <tr *ngFor="let car of list; let i = index;">
+            <td>{{car.plateNo}}</td>
+            <td>{{car.currentColor}}</td>
+            <td>{{car.targetColor}}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+      <div *ngIf="list.length < 1" class="alert alert-secondary" role="alert">
+        No car found
+      </div> 
+    </div>
+    <ng-template #loading>
+        <div class="d-flex justify-content-center mt-4">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+      </ng-template>

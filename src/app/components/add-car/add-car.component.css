@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column; 
+}
+
+.image {
+    width: 50%; /* or any desired width */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.title {
+    text-align: center;
+    font-weight: bold;
+
+}
+.detailsTitle {
+    text-align: left;
+    font-weight: bold;
+    align-self: flex-start;
+    padding-left: 20%;
+    font-size: 20px;
+}
+.form{
+    align-self: flex-start;
+    padding-left: 20%;
+    padding-top: 12px;
+}

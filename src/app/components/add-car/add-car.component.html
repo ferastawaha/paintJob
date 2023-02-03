@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="title">New Paint Job</h1>
+    <img src="../../assets/car.PNG" class="image" />
+    <h2 class="detailsTitle">Car details</h2>
+    <form class="form" [formGroup]="addForm" (ngSubmit)="submit()" >
+        <div class="form-group row">
+            <label for="plateNo" class="col-md-2 col-form-label">
+                Plate No.</label>
+            <div class="col-md-10" style="padding-bottom: 25px;">
+                <input type="text" [formControlName]="'plateNo'" id="email_address" class="form-control" style="width: 200px;" name="email-address"
+                    required autofocus>
+            </div>
+            <label for="plateNo" class="col-md-2 col-form-label" style="padding-bottom: 25px;">
+                Current color</label>
+            <div class="col-md-10" style="padding-bottom: 25px;">
+                <select class="form-select " [formControlName]="'currentColor'" style="width: 200px;">
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                    <option value="green">red</option>
+                </select>
+            </div>
+            <label for="plateNo" class="col-md-2 col-form-label" style="padding-bottom: 25px;">
+                Target Color</label>
+            <div class="col-md-10" style="padding-bottom: 25px;">
+                <select class="form-select md" [formControlName]="'targetColor'" style="width: 200px;">
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                    <option value="green">red</option>
+                </select>
+            </div>
+            <button type="submit" [disabled]="addForm.invalid" class="btn btn-primary" style="background-color: #ec6b5c; width: 200px;">
+                submit</button>
+        </div>
+    </form>
+</div>
